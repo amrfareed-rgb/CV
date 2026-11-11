@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>م. عمرو | مدير عام مكتب فني ومهندس مدني</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Cairo -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#1e3a8a', /* Deep Blue - Engineering & Trust */
+                        secondary: '#d97706', /* Amber/Gold - Excellence & Structure */
+                        darkslate: '#0f172a',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-pattern {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 58, 138, 0.9) 100%), url('https://placehold.co/1920x1080/0f172a/1e3a8a?text=Civil+Engineering') center/cover no-repeat;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- شريط التنقل (Navigation Bar) -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md shadow-sm transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-primary text-secondary flex items-center justify-center font-black text-xl shadow-md">
+                    ع
+                </div>
+                <div>
+                    <span class="block font-black text-lg text-slate-900 leading-tight">م. عمرو</span>
+                    <span class="block text-xs text-secondary font-bold">مدير عام مكتب فني</span>
+                </div>
+            </a>
+            
+            <!-- القائمة للشاشات الكبيرة -->
+            <nav class="hidden md:flex items-center gap-8 font-semibold text-slate-600">
+                <a href="#about" class="hover:text-primary transition">نبذة عني</a>
+                <a href="#expertise" class="hover:text-primary transition">الخبرات والمهارات</a>
+                <a href="#projects" class="hover:text-primary transition">المشاريع الكبرى</a>
+                <a href="#github-guide" class="hover:text-primary transition">دليل GitHub</a>
+                <a href="#contact" class="bg-primary text-white px-5 py-2.5 rounded-xl shadow-lg hover:bg-blue-900 transition flex items-center gap-2">
+                    <i class="fa-solid fa-paper-plane text-xs"></i> تواصل معي
+                </a>
+            </nav>
+
+            <!-- زر القائمة للجوال -->
+            <button id="menu-btn" class="md:hidden text-slate-700 text-2xl focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- القائمة المنسدلة للجوال -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 px-4 py-6 shadow-xl">
+            <div class="flex flex-col gap-4 font-semibold text-slate-700">
+                <a href="#about" class="mobile-link hover:text-primary">نبذة عني</a>
+                <a href="#expertise" class="mobile-link hover:text-primary">الخبرات والمهارات</a>
+                <a href="#projects" class="mobile-link hover:text-primary">المشاريع الكبرى</a>
+                <a href="#github-guide" class="mobile-link hover:text-primary">دليل GitHub</a>
+                <a href="#contact" class="mobile-link bg-primary text-white text-center py-3 rounded-xl shadow">تواصل معي</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- قسم الواجهة الرئيسية (Hero Section) -->
+    <section class="hero-pattern min-h-screen flex items-center justify-center text-white pt-24 pb-16 px-4">
+        <div class="max-w-5xl mx-auto text-center">
+            <div class="inline-flex items-center gap-2 bg-secondary/20 border border-secondary/40 text-secondary px-4 py-2 rounded-full text-sm font-bold mb-6 animate-pulse">
+                <i class="fa-solid fa-helmet-safety"></i> خبرة واسعة في إدارة المشروعات والمكاتب الفنية الكبرى
+            </div>
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight mb-6">
+                المهندس <span class="text-secondary underline decoration-secondary/50">عمرو</span>
+            </h1>
+            <p class="text-xl sm:text-2xl font-semibold text-slate-300 max-w-3xl mx-auto mb-10 leading-relaxed">
+                مهندس مدني محترف | مدير عام مكتب فني. متخصص في إدارة العقود، دراسات التكلفة، تخطيط المشروعات، وضمان أعلى معايير الجودة الهندسية.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#contact" class="bg-secondary text-slate-950 font-bold px-8 py-4 rounded-xl shadow-lg hover:bg-amber-500 transition flex items-center gap-3 text-lg">
+                    <i class="fa-solid fa-address-card"></i> طلب السيرة الذاتية / التواصل
+                </a>
+                <a href="#projects" class="bg-white/10 hover:bg-white/25 border border-white/20 font-bold px-8 py-4 rounded-xl transition text-lg backdrop-blur-sm">
+                    استعراض المشاريع والخبرات <i class="fa-solid fa-arrow-down mr-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- نبذة عني (About Section) -->
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5">
+                    <div class="relative">
+                        <div class="w-full h-[450px] bg-slate-200 rounded-3xl overflow-hidden shadow-2xl relative border-4 border-white">
+                            <!-- Placeholder image representing professional engineering profile -->
+                            <img src="https://placehold.co/600x800/1e3a8a/ffffff?text=Eng.+Amr" alt="المهندس عمرو" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -bottom-6 -right-6 bg-secondary text-slate-950 p-6 rounded-2xl shadow-xl font-black border-4 border-white">
+                            <span class="block text-3xl">15+</span>
+                            <span class="text-xs uppercase tracking-wider">عاماً من التميز الهندسي</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-7">
+                    <span class="text-secondary font-bold text-sm tracking-widest uppercase block mb-3">الملف المهني الشخصي</span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mb-6 leading-tight">
+                        قيادة المكاتب الفنية نحو التميز والكفاءة التشغيلية الهندسية
+                    </h2>
+                    <p class="text-slate-600 text-lg leading-relaxed mb-6">
+                        أنا المهندس <strong class="text-slate-900">عمرو</strong>، مهندس مدني ومدير عام مكتب فني بخبرة عميقة في إدارة وتنسيق الأقسام الهندسية المختلفة، إعداد المستخلصات والمقايسات، وحل المعضلات الفنية والعقدية في كبرى المشروعات الإنشائية والبنية التحتية.
+                    </p>
+                    <p class="text-slate-600 text-lg leading-relaxed mb-8">
+                        أؤمن بأن الإدارة الفنية الناجحة هي العصب الرئيسي لأي مشروع هندسي ناجح، حيث أعمل على ربط التصميم بالتنفيذ ضمن الميزانيات المحددة والجداول الزمنية الصارمة مع الالتزام الكامل بمعايير الكود الهندسي العالمي والمحلي.
+                    </p>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 pt-6 border-t border-slate-100">
+                        <div>
+                            <span class="block font-black text-3xl text-primary mb-1">50+</span>
+                            <span class="text-sm text-slate-500 font-semibold">مشروع تم إدارته</span>
+                        </div>
+                        <div>
+                            <span class="block font-black text-3xl text-primary mb-1">100%</span>
+                            <span class="text-sm text-slate-500 font-semibold">التزام بالجداول الزمنية</span>
+                        </div>
+                        <div>
+                            <span class="block font-black text-3xl text-primary mb-1">FIDIC</span>
+                            <span class="text-sm text-slate-500 font-semibold">إدارة العقود باحترافية</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الخبرات والمهارات (Expertise & Skills) -->
+    <section id="expertise" class="py-24 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-secondary font-bold text-sm tracking-widest uppercase block mb-3">الكفاءات التقنية والإدارية</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mb-4">مجالات الاختصاص والخبرة الإدارية</h2>
+                <p class="text-slate-600 text-lg">مجموعة متكاملة من المهارات الهندسية والإدارية المتقدمة لضمان نجاح وتسليم المشروعات بأعلى كفاءة.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- بطاقة 1 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition border border-slate-200 group">
+                    <div class="w-14 h-14 bg-primary/10 text-primary rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-primary group-hover:text-white transition">
+                        <i class="fa-solid fa-building-shield"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">إدارة المكاتب الفنية الكبرى</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        الإشراف الشامل على فرق العمل بالمكتب الفني، وتوزيع المهام، ومراجعة الرسومات التنفيذية (Shop Drawings) وحسابات الكميات.
+                    </p>
+                </div>
+
+                <!-- بطاقة 2 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition border border-slate-200 group">
+                    <div class="w-14 h-14 bg-secondary/10 text-secondary rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-secondary group-hover:text-slate-950 transition">
+                        <i class="fa-solid fa-file-contract"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">العقود الدولية وفيديك (FIDIC)</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        صياغة ومراجعة العقود الهندسية، فض النزاعات، وإدارة مطالبات المقاولين والمستخلصات المالية بدقة تامة.
+                    </p>
+                </div>
+
+                <!-- بطاقة 3 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition border border-slate-200 group">
+                    <div class="w-14 h-14 bg-primary/10 text-primary rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-primary group-hover:text-white transition">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">التخطيط وتكلفة المشروعات</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        استخدام برامج التخطيط المتقدمة مثل Primavera P6 و MS Project لمتابعة التدفقات النقدية والبرامج الزمنية للمشروعات.
+                    </p>
+                </div>
+
+                <!-- بطاقة 4 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition border border-slate-200 group">
+                    <div class="w-14 h-14 bg-secondary/10 text-secondary rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-secondary group-hover:text-slate-950 transition">
+                        <i class="fa-solid fa-calculator"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">حصر الكميات ومقايسات التكاليف</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        إعداد المقايسات التقديرية، جداول الكميات (BOQ)، ودراسات الجدوى الفنية والاقتصادية للمشروعات الإنشائية.
+                    </p>
+                </div>
+
+                <!-- بطاقة 5 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition border border-slate-200 group">
+                    <div class="w-14 h-14 bg-primary/10 text-primary rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-primary group-hover:text-white transition">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">إدارة الجودة والسلامة (QA/QC)</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        تطبيق أعلى معايير الجودة والسلامة المهنية في مواقع العمل ومطابقة المواصفات الفنية المعتمدة.
+                    </p>
+                </div>
+
+                <!-- بطاقة 6 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition border border-slate-200 group">
+                    <div class="w-14 h-14 bg-secondary/10 text-secondary rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-secondary group-hover:text-slate-950 transition">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">الأنظمة الهندسية والبرمجيات</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        إتقان تام لأنظمة AutoCAD، Revit، Civil 3D، وبرامج إدارة المشروعات وحزم أوفيس المؤسسية.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- المشاريع الكبرى (Major Projects Showcase) -->
+    <section id="projects" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-secondary font-bold text-sm tracking-widest uppercase block mb-3">سجل الأعمال الحافل</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mb-4">نماذج من المشروعات التي تشرفت بإدارتها</h2>
+                <p class="text-slate-600 text-lg">أبرز المشروعات الهندسية الكبرى التي قاد المكتب الفني تحت إدارتي نجاح تنفيذها.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- مشروع 1 -->
+                <div class="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition flex flex-col">
+                    <div class="h-52 bg-slate-300 relative overflow-hidden">
+                        <img src="https://placehold.co/600x400/1e3a8a/ffffff?text=Commercial+Tower" alt="مجمع أبراج تجارية" class="w-full h-full object-cover">
+                        <span class="absolute top-4 right-4 bg-primary text-white text-xs font-bold px-3 py-1.5 rounded-full shadow">أبراج سكنية وتجارية</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">مجمع الأبراج السكنية والتجارية الكبرى</h3>
+                            <p class="text-slate-600 text-sm mb-4 leading-relaxed">
+                                الإشراف على المكتب الفني للمشروع منذ مرحلة التصميم وحتى التسليم النهائي، بميزانية تجاوزت عدة مئات من ملايين الجنيهات.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-200 flex items-center justify-between text-xs text-slate-500 font-semibold">
+                            <span><i class="fa-solid fa-location-dot text-secondary ml-1"></i> العاصمة الإدارية / المدن الكبرى</span>
+                            <span class="text-primary">مدير المكتب الفني</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- مشروع 2 -->
+                <div class="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition flex flex-col">
+                    <div class="h-52 bg-slate-300 relative overflow-hidden">
+                        <img src="https://placehold.co/600x400/0f172a/ffffff?text=Infrastructure" alt="مشروع بنية تحتية" class="w-full h-full object-cover">
+                        <span class="absolute top-4 right-4 bg-secondary text-slate-950 text-xs font-bold px-3 py-1.5 rounded-full shadow">بنية تحتية وشبكات</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">مشروع شبكات المياه والصرف المتكاملة</h3>
+                            <p class="text-slate-600 text-sm mb-4 leading-relaxed">
+                                إدارة المراجعة الفنية والعقدية لشبكات ضخمة، وحل تقاطعات المرافق، والتنسيق الكامل مع الجهات الحكومية والمالكة.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-200 flex items-center justify-between text-xs text-slate-500 font-semibold">
+                            <span><i class="fa-solid fa-location-dot text-secondary ml-1"></i> مشاريع قومية</span>
+                            <span class="text-primary">مدير عام المكتب الفني</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- مشروع 3 -->
+                <div class="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition flex flex-col">
+                    <div class="h-52 bg-slate-300 relative overflow-hidden">
+                        <img src="https://placehold.co/600x400/1e3a8a/ffffff?text=Industrial+Complex" alt="مجمع صناعي" class="w-full h-full object-cover">
+                        <span class="absolute top-4 right-4 bg-primary text-white text-xs font-bold px-3 py-1.5 rounded-full shadow">منشآت صناعية</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">المجمع الصناعي الهيكلي المتطور</h3>
+                            <p class="text-slate-600 text-sm mb-4 leading-relaxed">
+                                إعداد التصاميم الإنشائية التفصيلية، والجداول الزمنية الحرجة للمعدات الثقيلة، والإشراف على اعتماد الموردين والمقاولين من الباطن.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-200 flex items-center justify-between text-xs text-slate-500 font-semibold">
+                            <span><i class="fa-solid fa-location-dot text-secondary ml-1"></i> المدن الصناعية</span>
+                            <span class="text-primary">استشاري المكتب الفني</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- دليل الرفع على GitHub (GitHub Guide Section) -->
+    <section id="github-guide" class="py-24 bg-slate-900 text-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-secondary font-bold text-sm tracking-widest uppercase block mb-3">جاهز للنشر أونلاين</span>
+                <h2 class="text-3xl sm:text-4xl font-black mb-4">كيف ترفع موقعك على GitHub Pages؟</h2>
+                <p class="text-slate-400 text-lg">خطوات بسيطة وسريعة لتجعل سيرتك الذاتية متاحة لكل العالم عبر رابط شخصي خاص بك.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-slate-800/80 p-8 rounded-3xl border border-slate-700 relative">
+                    <div class="w-12 h-12 bg-secondary text-slate-950 font-black rounded-2xl flex items-center justify-center text-xl mb-6">1</div>
+                    <h3 class="text-xl font-bold mb-3">أنشئ مستودعاً (Repository)</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        اذهب إلى موقع GitHub وأنشئ Repository جديد باسم مثل <code class="bg-slate-900 px-2 py-1 rounded text-secondary font-mono">amr-civil-cv</code> واجعله عاماً (Public).
+                    </p>
+                </div>
+
+                <div class="bg-slate-800/80 p-8 rounded-3xl border border-slate-700 relative">
+                    <div class="w-12 h-12 bg-secondary text-slate-950 font-black rounded-2xl flex items-center justify-center text-xl mb-6">2</div>
+                    <h3 class="text-xl font-bold mb-3">احفظ هذا الكود كـ index.html</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        احفظ محتوى هذا الملف تماماً باسم <code class="bg-slate-900 px-2 py-1 rounded text-secondary font-mono">index.html</code> وقم برفعه داخل المستودع الخاص بك على غيت هاب.
+                    </p>
+                </div>
+
+                <div class="bg-slate-800/80 p-8 rounded-3xl border border-slate-700 relative">
+                    <div class="w-12 h-12 bg-secondary text-slate-950 font-black rounded-2xl flex items-center justify-center text-xl mb-6">3</div>
+                    <h3 class="text-xl font-bold mb-3">فعل GitHub Pages</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        من إعدادات المستودع (Settings)، اذهب إلى قسم (Pages) واختر الفرع <code class="bg-slate-900 px-2 py-1 rounded text-secondary font-mono">main</code> ثم احفظ، وسيظهر رابط موقعك مباشرة!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم التواصل (Contact Section) -->
+    <section id="contact" class="py-24 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <span class="text-secondary font-bold text-sm tracking-widest uppercase block mb-3">تواصل مهني</span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mb-6">دعنا نناقش فرص التعاون القادمة</h2>
+                    <p class="text-slate-600 text-lg leading-relaxed mb-8">
+                        أرحب بالتواصل مع الشركات الهندسية الكبرى، المكاتب الاستشارية، والمهتمين بإدارة المشروعات الكبرى. يمكنك التواصل معي مباشرة عبر وسائل الاتصال أدناه.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm border border-slate-200">
+                            <div class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs text-slate-400 font-bold uppercase">البريد الإلكتروني</span>
+                                <a href="mailto:amr.civil.engineer@example.com" class="font-bold text-slate-800 hover:text-primary transition">amr.civil.engineer@example.com</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm border border-slate-200">
+                            <div class="w-12 h-12 bg-secondary/10 text-secondary rounded-xl flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs text-slate-400 font-bold uppercase">رقم الهاتف / واتساب</span>
+                                <a href="tel:+201000000000" dir="ltr" class="font-bold text-slate-800 hover:text-primary transition">+20 100 000 0000</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm border border-slate-200">
+                            <div class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center text-xl">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs text-slate-400 font-bold uppercase">لينكد إن (LinkedIn)</span>
+                                <a href="https://linkedin.com" target="_blank" class="font-bold text-slate-800 hover:text-primary transition">linkedin.com/in/amr-civil-manager</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 sm:p-10 rounded-3xl shadow-xl border border-slate-200">
+                    <h3 class="text-2xl font-black text-slate-900 mb-6">إرسال رسالة مباشرة</h3>
+                    <form onsubmit="handleFormSubmit(event)" class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">الاسم الكريم</label>
+                            <input type="text" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3.5 text-slate-800 focus:outline-none focus:border-primary transition" placeholder="ادخل اسمك أو اسم شركتك">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">البريد الإلكتروني</label>
+                            <input type="email" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3.5 text-slate-800 focus:outline-none focus:border-primary transition" placeholder="name@company.com">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">الرسالة أو الاستفسار</label>
+                            <textarea rows="4" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3.5 text-slate-800 focus:outline-none focus:border-primary transition" placeholder="تفاصيل عرض العمل أو الاستفسار الهندسي..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-primary text-white font-bold py-4 rounded-xl shadow-lg hover:bg-blue-900 transition flex items-center justify-center gap-2 text-lg">
+                            <i class="fa-solid fa-paper-plane"></i> إرسال الرسالة الآن
+                        </button>
+                    </form>
+                    <div id="form-msg" class="hidden mt-4 p-4 bg-emerald-50 text-emerald-800 rounded-xl font-bold text-center border border-emerald-200">
+                        تم إرسال رسالتك بنجاح! سيتم التواصل معك قريباً.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- تذييل الصفحة (Footer) -->
+    <footer class="bg-darkslate text-white py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-lg bg-secondary text-slate-950 flex items-center justify-center font-black">
+                    ع
+                </div>
+                <span class="font-bold text-lg">المهندس عمرو | مدير عام مكتب فني</span>
+            </div>
+            <p class="text-slate-400 text-sm text-center">
+                جميع الحقوق محفوظة &copy; 2026. مصمم خصيصاً للرفع على GitHub Pages.
+            </p>
+            <div class="flex items-center gap-4 text-xl">
+                <a href="#" class="w-10 h-10 rounded-full bg-slate-800 hover:bg-secondary hover:text-slate-950 flex items-center justify-center transition"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" class="w-10 h-10 rounded-full bg-slate-800 hover:bg-secondary hover:text-slate-950 flex items-center justify-center transition"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="w-10 h-10 rounded-full bg-slate-800 hover:bg-secondary hover:text-slate-950 flex items-center justify-center transition"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- جافاسكريبت للتفاعل وتفعيل القائمة -->
+    <script>
+        // تفعيل قائمة الجوال
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // التعامل مع إرسال النموذج بدون alert
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const msgBox = document.getElementById('form-msg');
+            msgBox.classList.remove('hidden');
+            e.target.reset();
+            setTimeout(() => {
+                msgBox.classList.add('hidden');
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
